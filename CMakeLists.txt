@@ -24,13 +24,13 @@ set(CMAKE_C_STANDARD 90)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-option(LIBUV_BUILD_SHARED "Build shared lib" ON)
+option(LIBUV_BUILD_SHARED "Build shared lib" OFF)
 
 cmake_dependent_option(LIBUV_BUILD_TESTS
-  "Build the unit tests when BUILD_TESTING is enabled and we are the root project" ON
+  "Build the unit tests when BUILD_TESTING is enabled and we are the root project" OFF
   "BUILD_TESTING;LIBUV_BUILD_SHARED;CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR" OFF)
 cmake_dependent_option(LIBUV_BUILD_BENCH
-  "Build the benchmarks when building unit tests and we are the root project" ON
+  "Build the benchmarks when building unit tests and we are the root project" OFF
   "LIBUV_BUILD_TESTS" OFF)
 
 # Qemu Build
