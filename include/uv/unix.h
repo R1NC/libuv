@@ -43,7 +43,7 @@
 #include <pthread.h>
 #include <signal.h>
 
-#include "uv/threadpool.h"
+#include "threadpool.h"
 
 #if defined(__linux__)
 # include "linux.h"
